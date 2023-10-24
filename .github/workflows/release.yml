@@ -1,0 +1,24 @@
+name: release
+
+on:
+  pull_request_target:
+    types: [closed]
+  workflow_dispatch:
+    inputs:
+      releaseType:
+        description: 'Release type'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  release_job:
+    uses: bedita/github-workflows/.github/workflows/release.yml@v1
+    with:
+      main_branch: 'main'
+      dist_branches: '["main"]'
+      version_bump: ${{ inputs.releaseType }}

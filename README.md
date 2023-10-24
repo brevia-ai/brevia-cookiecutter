@@ -6,5 +6,5 @@ To create a new project just run
 
 ```bash
 pip install cookiecutter
-cookiecutter gh:stefanorosanelli/brevia-cookiecutter
+cookiecutter gh:brevia-ai/brevia-cookiecutter
 ```
