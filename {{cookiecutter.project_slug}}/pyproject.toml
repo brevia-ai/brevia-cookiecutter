@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "{{cookiecutter.project_slug}}"
+version = "0.0.1"
+description = "{{cookiecutter.project_description}}"
+authors = [
+  "{{cookiecutter.author_name}} {{cookiecutter.author_email}}"
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+brevia = "^0.0.3"
+en_core_web_sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0.tar.gz"}
+fasttext = {git = "https://github.com/cfculhane/fastText", rev = "main"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,25 @@
+# This file should be used to test your services via CLI
+# providing input files, custom parameters and custom prompts
+
+# Specify your service with module path and class (can be a custom o core service)
+service: brevia.services.SummarizeTextService
+
+# Output file path
+output_path: "/path/to/output/output.txt"
+
+payload:
+  # Input file path
+  file_path: "/path/to/file.pdf"
+
+  # Here you can provide some custom prompts for your services
+  prompts:
+      summarize:
+        _type: prompt
+        input_variables:
+          ["text"]
+        template: |
+          Write a short summary of this text:
+          ------------
+          {text}
+          ------------
+

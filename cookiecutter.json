@@ -1,0 +1,32 @@
+{
+    "project_name": "Brevia Project",
+    "project_slug": "{{ cookiecutter.project_name|lower|replace(' ', '-') }}",
+    "project_description": "",
+    "author_name": "",
+    "author_email": "",
+
+    "postgres_host": "localhost",
+    "postgres_port": "5432",
+
+    "postgres_database": "brevia",
+    "postgres_user": "brevia",
+    "postgres_password": "brevia",
+
+    "openai_api_key": "",
+
+    "__prompts__": {
+        "project_name": "Select your project name",
+        "project_slug": "Project slug (main folder that will be created)",
+        "project_description": "Provide a brief project description",
+        "author_name": "Select main author name",
+        "author_email": "Select main author email",
+
+        "postgres_host": "Database host",
+        "postgres_port": "Database port",
+        "postgres_database": "Database name",
+        "postgres_user": "Database connection username",
+        "postgres_password": "Database connection password",
+    
+        "openai_api_key": "Provide your Openai API Key"
+    }
+}

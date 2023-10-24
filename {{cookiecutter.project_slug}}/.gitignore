@@ -1,0 +1,18 @@
+# Editor directories and files
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+/.history
+/.vscode
+
+.env.docker
+venv/
+.venv/
+log.ini
+*.log
+__pycache__
+/tmp/*
