@@ -8,3 +8,5 @@ To create a new project just run
 pip install cookiecutter
 cookiecutter gh:brevia-ai/brevia-cookiecutter
 ```
+
+A new folder containing you new Brevia API project will be created
