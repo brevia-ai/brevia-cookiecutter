@@ -20,7 +20,9 @@ You can run `docker compose --profile admin up` to run postgres+pgvector and pga
 
 The `4000` port is configurable with the `PGADMIN_PORT` environment var in the `.env` file.
 
-Launch migrations to create the initial schema with [Alembic](https://alembic.sqlalchemy.org) by using this brevia command
+if you prefer to use another Postgres instance, for example installed on your development system, make sure the db connection parameters are correct (`PGVECTOR_*` entries in the `.env` file).
+
+Launch migrations to create the initial schema with [Alembic](https://alembic.sqlalchemy.org) by using this brevia command inside the virtual env:
 
 ```bash
 db_upgrade
@@ -28,10 +30,10 @@ db_upgrade
 
 ## Launch
 
-You are now ready to go, simply run
+You are now ready to go, simply run inside the virtual env:
 
 ```bash
-uvicorn --env-file .env main:app`
+uvicorn main:app`
 ```
 
 and your [Brevia API](https://github.com/brevia-ai/brevia) project is ready to accept calls!
