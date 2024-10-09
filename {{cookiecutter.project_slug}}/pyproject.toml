@@ -8,10 +8,8 @@ authors = [
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-brevia = "^0.0.19"
-en_core_web_sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.6.0/en_core_web_sm-3.6.0.tar.gz"}
-fasttext = {git = "https://github.com/cfculhane/fastText", rev = "main"}
+python = ">=3.10,<3.13"
+brevia = "^0.0.42"
 
 [build-system]
 requires = ["poetry-core"]
