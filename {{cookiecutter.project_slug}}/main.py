@@ -1,12 +1,16 @@
 """API endpoint definitions with FastAPI."""
 from os import environ
+from pathlib import Path
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import uvicorn
 from brevia.routers.app_routers import add_routers
+from brevia.middleware import VersionHeaderMiddleware
+from brevia.utilities.openapi import metadata
 
-app = FastAPI()
+meta = metadata(f'{Path(__file__).parent}/pyproject.toml')
+app = FastAPI(**meta)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -14,6 +18,7 @@ app.add_middleware(
     allow_methods=["POST"],
     allow_headers=["*"],
 )
+app.add_middleware(VersionHeaderMiddleware, api_name=app.title, api_version=app.version)
 add_routers(app)
 
 # Add your custom endpoints here...
