@@ -9,7 +9,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.10,<3.13"
-brevia = "^0.0.42"
+brevia = "{{cookiecutter.brevia_version}}"
 
 [build-system]
 requires = ["poetry-core"]

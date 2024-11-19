@@ -5,6 +5,8 @@
     "author_name": "",
     "author_email": "",
 
+    "brevia_version": "*",
+
     "postgres_host": "localhost",
     "postgres_port": "5432",
 
@@ -13,6 +15,7 @@
     "postgres_password": "brevia",
 
     "openai_api_key": "",
+    "cohere_api_key": "",
 
     "__prompts__": {
         "project_name": "Select your project name",
@@ -20,13 +23,14 @@
         "project_description": "Provide a brief project description",
         "author_name": "Select main author name",
         "author_email": "Select main author email",
-
+        "brevia_version": "Brevia version to install (dafault is latest version)",
         "postgres_host": "Database host",
         "postgres_port": "Database port",
         "postgres_database": "Database name",
         "postgres_user": "Database connection username",
         "postgres_password": "Database connection password",
     
-        "openai_api_key": "Provide your Openai API Key"
+        "openai_api_key": "Provide your Openai API Key",
+        "cohere_api_key": "Provide your Cohere API Key"
     }
 }
