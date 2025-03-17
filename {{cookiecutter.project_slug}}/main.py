@@ -8,6 +8,7 @@ import uvicorn
 from brevia.routers.app_routers import add_routers
 from brevia.middleware import VersionHeaderMiddleware
 from brevia.utilities.openapi import metadata
+from brevia.events import app_events
 
 meta = metadata(f'{Path(__file__).parent}/pyproject.toml')
 app = FastAPI(**meta)
@@ -20,6 +21,7 @@ app.add_middleware(
 )
 app.add_middleware(VersionHeaderMiddleware, api_name=app.title, api_version=app.version)
 add_routers(app)
+app_events(app)
 
 # Add your custom endpoints here...
 
