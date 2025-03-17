@@ -25,6 +25,6 @@
         "postgres_port": "Database port",
         "postgres_database": "Database name",
         "postgres_user": "Database connection username",
-        "postgres_password": "Database connection password",
+        "postgres_password": "Database connection password"
     }
 }
