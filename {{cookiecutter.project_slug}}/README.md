@@ -12,7 +12,7 @@ This is a [Brevia API](https://github.com/brevia-ai/brevia) project.
 
 * install the dependencies by running `poetry install`, a virtualenv will automatically be created in the `.venv` folder
 * activate the virtualenv by running the `poetry shell` command.
-* check the `.env` file where environment variables are stored, especially `OPENAI_API_KEY` with the secret key of OpenAI and `PGVECTOR_*` see the [Database](#database) section
+* check the `.env` file where environment variables are stored, especially `BREVIA_ENV_SECRETS`, where you cna store LLM providers secrets (like OPENAI_API_KEY, COHERE_API_KEY etc...), and `PGVECTOR_*` for the database connection, see the [Database](#database) section
 
 ## Database
 
