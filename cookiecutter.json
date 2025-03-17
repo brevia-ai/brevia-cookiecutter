@@ -14,9 +14,6 @@
     "postgres_user": "brevia",
     "postgres_password": "brevia",
 
-    "openai_api_key": "",
-    "cohere_api_key": "",
-
     "__prompts__": {
         "project_name": "Select your project name",
         "project_slug": "Project slug (main folder that will be created)",
@@ -29,8 +26,5 @@
         "postgres_database": "Database name",
         "postgres_user": "Database connection username",
         "postgres_password": "Database connection password",
-    
-        "openai_api_key": "Provide your Openai API Key",
-        "cohere_api_key": "Provide your Cohere API Key"
     }
 }
