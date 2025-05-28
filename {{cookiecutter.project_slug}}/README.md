@@ -16,17 +16,23 @@ This is a [Brevia API](https://github.com/brevia-ai/brevia) project.
 
 ## Database
 
-You can run `docker compose --profile admin up` to run postgres+pgvector and pgadmin docker images. With your browser, open `pgadmin` at http://localhost:4000
+If you have a PostgreSQL instance with the `pg_vector` extension available, you are ready to go. Otherwise, you can use the provided Docker Compose file.
 
-The `4000` port is configurable with the `PGADMIN_PORT` environment var in the `.env` file.
+Simply run `docker compose up` to start a PostgreSQL database with `pg_vector`.
+You can also run the embedded [`pgAdmin`](https://www.pgadmin.org) admin tool by running `docker compose --profile admin up` to start both the postgres+pgvector and pgadmin Docker images.
+Open `pgadmin` in your browser at http://localhost:4000
 
-if you prefer to use another Postgres instance, for example installed on your development system, make sure the db connection parameters are correct (`PGVECTOR_*` entries in the `.env` file).
+The `4000` port is configurable via the `PGADMIN_PORT` environment variable in the `.env` file.
 
-Launch migrations to create the initial schema with [Alembic](https://alembic.sqlalchemy.org) by using this brevia command inside the virtual env:
+## Migrations
+
+Before using Brevia, you need to run the migrations script to create or update the initial schema. Use the following command from the virtual environment:
 
 ```bash
 db_upgrade
 ```
+
+This will run migrations using [Alembic](https://alembic.sqlalchemy.org/en/latest/) (already installed as a dependency) to create or update the required tables in your database.
 
 ## Launch
 
